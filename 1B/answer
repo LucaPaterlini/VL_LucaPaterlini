@@ -1,0 +1,2 @@
+The solution is optimal due to the fact that it's complexity is linear to the number of moves
+that are needed to bring all the elements to the white color.
