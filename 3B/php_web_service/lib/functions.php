@@ -39,8 +39,6 @@
     function makeAllWhite($Vitamin_String){
         # makeAllWhite: return the array of moves needed to set all of the colors
         # of the shapes to white accordingly with the Maxi-Maxi Principle.
-
-        //$Vitamin_String=trim($Vitamin_String);
         $Vitamin_String=trim($Vitamin_String);
         $colors =  "BGW";
         $tmp_v =[];$names_v = [];
