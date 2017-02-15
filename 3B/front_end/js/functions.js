@@ -91,6 +91,7 @@ $(document).ready(function(){
     $("#mrb" ).click(function() {
 
         var tosort_s_command = $("#vitamins").val().trim();
+        console.log("\""+tosort_s_command+"\"");
 
         /* check the input sent by the user*/
         if (!input_regex.test(tosort_s_command)) {
