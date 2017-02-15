@@ -1,7 +1,7 @@
 # -*- coding:utf-8 -*-
-<<<<<<< HEAD
 
-def move(ndisks, startPeg, endPeg,tmp_v,return_list):
+
+def move(ndisks, startPeg, endPeg, tmp_v, return_list):
     # move: moves a pile of shapes from the source color to the target color
     if ndisks:
         move(ndisks-1, startPeg, 3-startPeg-endPeg,tmp_v,return_list)
@@ -9,32 +9,17 @@ def move(ndisks, startPeg, endPeg,tmp_v,return_list):
         tmp_v[element] = endPeg
         return_list.append([startPeg, endPeg, abs(element+1)])
         move(ndisks-1, 3-startPeg-endPeg, endPeg,tmp_v,return_list)
-=======
-def move(n, tmp_v, source, target, auxiliary, return_list):
-    # move: moves a pile of shapes from the source color to the target color
-    if n > 0:
-        move(n-1, tmp_v, source, auxiliary, target, return_list)
-        element = -tmp_v[-1::-1].index(source)-1
-        tmp_v[element] = target
-        return_list.append([source, target, abs(element+1)])
-        move(n-1, tmp_v, auxiliary, target, source, return_list)
 
 
->>>>>>> dbabcb9eac1bdda86be5484c3a7f5c9e911395cb
-def hanoiMoves(vitamin,tmp_v, size):
+def hanoiMoves(vitamin, tmp_v, size):
     # hanoiMoves: starts from the final stage searching where to put the next disk from the bottom of the pile
     return_values=[]
     for i in xrange(size-1, -1, -1):
         t = -1-i
         if vitamin[t] == tmp_v[t]:
             continue
-<<<<<<< HEAD
         if i > 0:
             move(i, tmp_v[t], 3 - vitamin[t] - tmp_v[t], tmp_v, return_values)
-=======
-        if i > 1:
-            move(i, tmp_v, tmp_v[t], 3-vitamin[t]-tmp_v[t], vitamin[t], return_values)
->>>>>>> dbabcb9eac1bdda86be5484c3a7f5c9e911395cb
         return_values.append([tmp_v[t], vitamin[t], i])
         tmp_v[t] = vitamin[t]
     return return_values
