@@ -71,7 +71,9 @@
 
         foreach ($list_moves as &$c){
             $tmp_dict[$c[0]] = $c[2];
-            array_push($result,join(' ',array_map(function($k) use ($tmp_dict) {return strval($k).$tmp_dict[$k]; },array_keys($tmp_dict))));
+            array_push($result,join(' ',
+                array_map(function($k) use ($tmp_dict)
+                {return strval($k).$tmp_dict[$k]; },array_keys($tmp_dict))));
         }
         unset($c);
         return $result;
