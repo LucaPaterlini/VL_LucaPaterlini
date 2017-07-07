@@ -16,8 +16,7 @@ def hanoiMoves(vitamin, tmp_v, size):
     return_values=[]
     for i in xrange(size-1, -1, -1):
         t = -1-i
-        if vitamin[t] == tmp_v[t]:
-            continue
+        if vitamin[t] == tmp_v[t]:continue
         if i > 0:
             move(i, tmp_v[t], 3 - vitamin[t] - tmp_v[t], tmp_v, return_values)
         return_values.append([tmp_v[t], vitamin[t], i])
@@ -26,6 +25,7 @@ def hanoiMoves(vitamin, tmp_v, size):
 
 
 def reverseMovesAddNames(l,names,s_vitamin):
+    print l, names, s_vitamin
     # reverseMovesAddNames: changes the order and add the proper names to the array of the moves
     result = []
     for item in l[::-1]:
@@ -58,3 +58,8 @@ def makeAllWhiteStatus(s_vitamins,list_moves):
         tmp_dict[c[0]] = c[-1]
         result.append(' '.join([str(k)+tmp_dict[k] for k in tmp_dict.keys()]))
     return result
+
+#res =[]
+#move(1,2,1,[2,2],res);print res
+#print hanoiMoves([0,0,0],[2,2,2],3)
+print makeAllWhiteStatus("3B 4B",makeAllWhite("3B 4B"))
