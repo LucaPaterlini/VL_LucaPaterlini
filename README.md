@@ -1,4 +1,4 @@
-##USAGE
+## USAGE
 In order to activate the server side part to test 1B
 
 ``python 1B/python_makeAllWhite/web_service_vitamins_moves.py``
@@ -19,7 +19,7 @@ domain:PORT/vitamin/statuses
 
 to activate the function that returns the list of status ancountered during the execution
 
-##Extra:
+## Extra:
 
 PHP serverside
 
